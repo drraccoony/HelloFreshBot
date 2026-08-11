@@ -35,4 +35,12 @@ return [
         ],
     ],
 
+    'telegram' => [
+        'bot_token' => env('TELEGRAM_BOT_TOKEN'),
+        // Comma-separated Telegram chat ids (private chat id == that user's id; a
+        // group/supergroup has its own, usually negative, id) allowed to interact with
+        // the bot. Synced into telegraph_chats by `php artisan telegraph:sync`.
+        'allowed_chat_ids' => env('TELEGRAM_ALLOWED_CHAT_IDS'),
+    ],
+
 ];
